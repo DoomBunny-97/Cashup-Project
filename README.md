@@ -1,4 +1,4 @@
-# Cashup-Project (Project 1)
+# Cash Up App Project *ZAR* (Project 1) 
 Made as a test project of what I've learned so far. 
 - Takes input from computer totals at the very top. *(most POS systems give a summary of sales at the end of the day when closing)*
 - Takes input for counted amount of each bill and coin. *(Currency: South African Rand)*
