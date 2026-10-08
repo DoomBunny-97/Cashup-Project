@@ -34,7 +34,9 @@ container.addEventListener("input", function (e) {
       let iNum = parseFloat(i.textContent) || 0;
       bigTotal += iNum;
     }
-
+    
+//  Float Value set inside excFloatField.textContent = ... 
+//  If changed, please note here: 200
     totalField.textContent = bigTotal.toFixed(2);
     excFloatField.textContent = (
       parseFloat(totalField.textContent) - 200
