@@ -23,6 +23,7 @@ This removes the need for manual calculations and saves time during cash up, whi
 - Previous input saving on refresh
 - Refresh button to refresh and clear save
 - Card totals section **(field to input slip totals for the app to auto calc., as well as add it to the totals so there's no need for manual calculations)**
+- Field for float **(currently set static 200 and needs to be edited in the code if updated)**
 - Function to save a document version of the cash up for filing or printing if required.
 - Possible accommodation for more currencies once I'm satisfied with the rest? **(I currently live in SA so for now ZAR will be the focus)**
 
