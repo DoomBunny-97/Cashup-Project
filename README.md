@@ -15,7 +15,7 @@ This removes the need for manual calculations and saves time during cash up, whi
 - Takes input for counted amount of each bill and coin. **(Currency: South African Rand)**
 - Total:        all cash counted. **(All coins and bills in register)**
 - Excl. Float:  cash to be handed in **(Float set to R200. Float is kept in the till mostly in small change)**
-- Difference:   Indicates if there's a shortage or overflow. **(Ideally at R0 every cashup)**
+- Difference:   Indicates if there's a shortage or overflow. **(Ideally at R0 every cash up)**
 
 **NOTE**: ***Computer totals*** need to be equal to ***Exc. Float*** for there to be no difference **(Difference = R0)**
 
