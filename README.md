@@ -7,7 +7,8 @@ I was working as a Weekday Afternoon(*11am-7pm, exc. Wednesday*) and Saturday fu
 ### Project Purpose:
 - Converts coin and note total to its value in CURRENCY **(Currency: South African Rand)**
 - Adds up the cash value and subtracts FLOAT to get daily profits **(not accounting for purchase value of items, only current sale)**
-- Subtracts computer total from calculated value to check for SHORTAGES/OVERFLOW  
+- Subtracts computer total from calculated value to check for SHORTAGES/OVERFLOW
+
 This removes the need for manual calculations and saves time during cash up, which improves safety ***(and sanity </3)***
 
 ### Project Functions:
