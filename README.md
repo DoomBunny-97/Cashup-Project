@@ -13,7 +13,7 @@ This removes the need for manual calculations and saves time during cash up, whi
 ### Project Functions:
 - Takes input from computer totals at the very top. **(most POS systems give a summary of sales at the end of the day when closing)**
 - Takes input for counted amount of each bill and coin. **(Currency: South African Rand)**
-- Total:        all cash counted. **(All coins and bills in register)**
+- Total:        value of all cash counted. **(All coins and bills in register)**
 - Excl. Float:  cash to be handed in **(Float set to R200. Float is kept in the till mostly in small change)**
 - Difference:   Indicates if there's a shortage or overflow. **(Ideally at R0 every cash up)**
 
