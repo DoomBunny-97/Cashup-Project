@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <span class="title-button">
+        <h1>Cash Up</h1>
+        <input
+          type="number"
+          name="compTot"
+          id="compTot"
+          placeholder="Computer Total"
+        />
+        <button onclick="clearInputs()">Clear</button>
+      </span>
+      <div class="line"></div>
+      <div>
+        <span class="value">0.1</span>
+        10c x<input type="number" placeholder="0" /> = R<span
+          class="small-total"
+          >0.00</span
+        >
+      </div>
+      <div>
+        <span class="value">0.2</span>
+        20c x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">0.5</span>
+        50c x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">1</span>
+        R1 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">2</span>
+        R2 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">5</span>
+        R5 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">10</span>
+        R10 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">20</span>
+        R20 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">50</span>
+        R50 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">100</span>
+        R100 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div>
+        <span class="value">200</span>
+        R200 x<input type="number" placeholder="0" /> = R
+        <span class="small-total">0.00</span>
+      </div>
+      <div class="totals-div">
+        <p>Total = R<span class="total">0.00</span></p>
+        <p>Excl. Float = R<span class="excl-float">0.00</span></p>
+      </div>
+      <div id="diff"><p>Difference = R<span>0.00</span></p></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
