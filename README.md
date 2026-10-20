@@ -1,4 +1,4 @@
-# Cash Up App Project *ZAR*  
+# Cash Up App Project *ZAR*  [WIP]
 ### *(Project #1)*
 
 **Made as a test project of what I've learned so far**.  
