@@ -14,13 +14,19 @@ This removes the need for manual calculations and saves time during cash up, whi
 ### Project Functions:
 - Takes input from computer totals at the very top. **(most POS systems give a summary of sales at the end of the day when closing)**
 - Takes input for counted amount of each bill and coin. **(Currency: South African Rand)**
-- Total:        value of all cash counted. **(All coins and bills in register)**
-- Excl. Float:  cash to be handed in **(Float set to R200. Float is kept in the till mostly in small change)**
-- Difference:   Indicates if there's a shortage or overflow. **(Ideally at R0 every cash up)**
+- Total: Value of all cash counted. **(All coins and bills in register)**
+- Excl. Float: Cash to be handed in **(Float set to R200. Float is kept in the till mostly in small change)**
+- Difference: Indicates if there's a shortage or overflow. **(Ideally at R0 every cash up)**
 
 **NOTE**: ***Computer totals*** need to be equal to ***Exc. Float*** for there to be no difference **(Difference = R0)**
 
-### Things I'd like to add (*Working on it*):
+### UPDATE:
+- Changed sizing.
+- Limited inputs to 10 digits.
+- Large numbers still kind of break UI
+
+### TO DO:
+- Format so large numbers don't mess up UI.
 - Previous input saving on refresh
 - Refresh button to refresh and clear save
 - Card totals section **(field to input slip totals for the app to auto calc., as well as add it to the totals so there's no need for manual calculations)**
