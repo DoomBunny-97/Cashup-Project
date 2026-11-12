@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- <span id="testSpan">tt</span> -->
 
     <div class="container">
-      <span class="title-button">
+      <div class="title-button">
         <h1>Cash Up</h1>
         <input
           type="number"
@@ -17,70 +18,79 @@
           placeholder="Computer Total"
         />
         <button onclick="clearInputs()">Clear</button>
-      </span>
+      </div>
       <div class="line"></div>
-      <div>
+      <div class="wrapper">
         <span class="value">0.1</span>
-        10c x<input type="number" placeholder="0" /> = R<span
-          class="small-total"
-          >0.00</span
-        >
+        <p>10c x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)"/> = R
+        <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">0.2</span>
-        20c x<input type="number" placeholder="0" /> = R
+        <p>20c x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">0.5</span>
-        50c x<input type="number" placeholder="0" /> = R
+        <p>50c x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">1</span>
-        R1 x<input type="number" placeholder="0" /> = R
+        <p>R1 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">2</span>
-        R2 x<input type="number" placeholder="0" /> = R
+        <p>R2 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">5</span>
-        R5 x<input type="number" placeholder="0" /> = R
+        <p>R5 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">10</span>
-        R10 x<input type="number" placeholder="0" /> = R
+        <p>R10 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">20</span>
-        R20 x<input type="number" placeholder="0" /> = R
+        <p>R20 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">50</span>
-        R50 x<input type="number" placeholder="0" /> = R
+        <p>R50 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">100</span>
-        R100 x<input type="number" placeholder="0" /> = R
+        <p>R100 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div>
+      <div class="wrapper">
         <span class="value">200</span>
-        R200 x<input type="number" placeholder="0" /> = R
+        <p>R200 x</p><input type="number" placeholder="0" 
+        oninput="preventOverflow(this)" /> = R
         <span class="small-total">0.00</span>
       </div>
-      <div class="totals-div">
+      <div class="totals-div wrapper">
         <p>Total = R<span class="total">0.00</span></p>
         <p>Excl. Float = R<span class="excl-float">0.00</span></p>
       </div>
-      <div id="diff"><p>Difference = R<span>0.00</span></p></div>
+      <div id="diff" class="wrapper"><p>Difference = R<span>0.00</span></p></div>
     </div>
 
     <script src="script.js"></script>
