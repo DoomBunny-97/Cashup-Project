@@ -1,12 +1,30 @@
 const container = document.querySelector(".container");
+
 const total = document.querySelector(".total");
 const exclFloat = document.querySelector(".excl-float");
 const inputField = document.querySelector("input");
 const inputs = document.querySelectorAll("input");
+
 const test = document.getElementById("testSpan");
 
+// function saveDoc(){
+//   const page = document.textContent;
+//   localStorage.setItem('pageState', JSON.stringify(page));
+// }
+// function loadDoc(){
+//   const page = localStorage.getItem('pageState');
+//   if (page){
+//     const pageReload = JSON.parse(page);
+//     document.textContent = pageReload;
+//   }
+// }
+// loadDoc();
 function totalCalc(inp, currValue) {
   return (inp * currValue).toFixed(2);
+}
+
+function preventOverflow(inp){
+  if (inp.value.length > 5) inp.value = inp.value.slice(0, 5);
 }
 
 // For input fields and totals
@@ -34,9 +52,7 @@ container.addEventListener("input", function (e) {
       let iNum = parseFloat(i.textContent) || 0;
       bigTotal += iNum;
     }
-    
-//  Float Value set inside excFloatField.textContent = ... 
-//  If changed, please note here: 200
+
     totalField.textContent = bigTotal.toFixed(2);
     excFloatField.textContent = (
       parseFloat(totalField.textContent) - 200
@@ -52,6 +68,8 @@ container.addEventListener("input", function (e) {
     } else {
       diff.textContent = "0";
     }
+
+    // saveDoc();
   }
 });
 
@@ -59,10 +77,12 @@ function clearInputs() {
   for (let i of inputs) {
     i.value = "";
   }
+  // saveDoc();
   location.reload();
 }
 
 // clear button to clear inputs ///
 // field for computer total ///
+// field showing difference for shortage ///
 
 // onboard save function for accidental closing of app ???
