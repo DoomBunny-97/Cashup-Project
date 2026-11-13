@@ -21,18 +21,18 @@ This removes the need for manual calculations and saves time during cash up, whi
 **NOTE**: ***Computer totals*** need to be equal to ***Exc. Float*** for there to be no difference **(Difference = R0)**
 
 ### UPDATE:
-- Changed sizing.
-- Limited inputs to 10 digits.
+- Save and reload works now!
+- Clearing and reloading brings back previous small totals so still need to check that. (Refreshes all when adding an input or clicking clear again so doesnt break the app. Just odd :/)
 - Large numbers still kind of break UI
 
 ### TO DO:
 - Format so large numbers don't mess up UI.
-- Previous input saving on refresh
-- Refresh button to refresh and clear save
 - Card totals section **(field to input slip totals for the app to auto calc., as well as add it to the totals so there's no need for manual calculations)**
-- Field for float **(currently set static 200 and needs to be edited in the code if updated)**
+- Input field for float **(currently set static 200 and needs to be edited in the code if updated)**
 - Function to save a document version of the cash up for filing or printing if required.
 - Possible accommodation for more currencies once I'm satisfied with the rest? **(I currently live in SA so for now ZAR will be the focus)**
+- ~~Previous input saving on refresh~~
+- ~~Refresh button to refresh and clear save.~~ (clear does this now <3)
 
 I am open for suggestions and advice but only if you want to help me learn. This is my ***literal first*** self made project. I am new. **Please be humane**.
 
