@@ -1,24 +1,42 @@
 const container = document.querySelector(".container");
-
+const wrappers = container.querySelectorAll('.wrapper');
 const total = document.querySelector(".total");
 const exclFloat = document.querySelector(".excl-float");
-const inputField = document.querySelector("input");
 const inputs = document.querySelectorAll("input");
+const smallTotals = document.querySelectorAll(".small-total");
+const title = document.querySelector('.title-button');
+const clearButt = title.querySelector('button');
+// console.log(inputs); // ------------------TEST
 
-const test = document.getElementById("testSpan");
+// ----------------------------------------------- SAVE - LOAD {
+function saveDoc(){ 
+  smallTotals.forEach((item, index) => {
+    localStorage.setItem(`smallTot_${index}`, item.textContent);
+  })
 
-// function saveDoc(){
-//   const page = document.textContent;
-//   localStorage.setItem('pageState', JSON.stringify(page));
-// }
-// function loadDoc(){
-//   const page = localStorage.getItem('pageState');
-//   if (page){
-//     const pageReload = JSON.parse(page);
-//     document.textContent = pageReload;
-//   }
-// }
-// loadDoc();
+  inputs.forEach((field, index) => {
+    localStorage.setItem(`field_${index}`, field.value);
+  });
+}
+
+function loadDoc(){
+  smallTotals.forEach((item, index) => {
+    const smallTot = localStorage.getItem(`smallTot_${index}`);
+    if (smallTot !== null){
+      item.textContent = smallTot;
+    }
+  })
+
+  inputs.forEach((field, index) => {
+    const savedValue = localStorage.getItem(`field_${index}`);
+    if (savedValue !== null){
+      field.value = savedValue;
+    }
+  });
+}
+loadDoc();
+// ----------------------------------------------- SAVE - LOAD } 
+
 function totalCalc(inp, currValue) {
   return (inp * currValue).toFixed(2);
 }
@@ -28,23 +46,23 @@ function preventOverflow(inp){
 }
 
 // For input fields and totals
-container.addEventListener("input", function (e) {
-  if (e.target.tagName === "INPUT") {
-    const currencyValue =
-      e.target.parentElement.querySelector(".value").textContent;
-    const targetSpan = e.target.parentElement.querySelector(".small-total");
+function updateTotalsSmall(){
+  wrappers.forEach(wrap => {
+    const itemAmount = wrap.querySelector('input').value; // input amount
+    const currValue = wrap.querySelector('.value').textContent; // item value per
+    const targetSpan = wrap.querySelector('.small-total'); // span for calc value
 
-    targetSpan.textContent = totalCalc(e.target.value, currencyValue);
-  }
-});
+    targetSpan.textContent = totalCalc(itemAmount, currValue);
 
-container.addEventListener("input", function (e) {
-  if (e.target.tagName === "INPUT") {
+
+  })
+}
+
+function updateTotals() {
     let bigTotal = 0;
 
     const totalField = document.querySelector(".total");
     const excFloatField = document.querySelector(".excl-float");
-    const smallTotals = document.querySelectorAll(".small-total");
     const diff = document.getElementById("diff").querySelector("span");
     const compTot = document.getElementById("compTot");
 
@@ -59,7 +77,6 @@ container.addEventListener("input", function (e) {
     ).toFixed(2);
     let minFloat = excFloatField.textContent;
     let compVal = compTot.value || 0;
-    let totVal = parseFloat(totalField.textContent) || 0;
     let shortage = (compVal - minFloat).toFixed(2);
     if (shortage > 0) {
       diff.textContent = `-${shortage}`;
@@ -69,20 +86,22 @@ container.addEventListener("input", function (e) {
       diff.textContent = "0";
     }
 
-    // saveDoc();
-  }
-});
+    saveDoc();
+};
 
 function clearInputs() {
   for (let i of inputs) {
     i.value = "";
   }
-  // saveDoc();
-  location.reload();
+  
+  saveDoc();
+
 }
 
-// clear button to clear inputs ///
-// field for computer total ///
-// field showing difference for shortage ///
-
-// onboard save function for accidental closing of app ???
+container.addEventListener('input', () => updateTotals());
+clearButt.addEventListener('click', () => {
+  clearInputs();
+  updateTotalsSmall();
+  saveDoc();
+});
+wrappers.forEach(wrap => wrap.addEventListener('input', () => updateTotalsSmall()));
