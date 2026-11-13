@@ -53,8 +53,6 @@ function updateTotalsSmall(){
     const targetSpan = wrap.querySelector('.small-total'); // span for calc value
 
     targetSpan.textContent = totalCalc(itemAmount, currValue);
-
-
   })
 }
 
